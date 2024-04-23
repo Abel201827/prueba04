@@ -4,26 +4,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaHome, FaRegComment } from 'react-icons/fa'; 
 import './style.css';
+import { Navbar, Nav, Container, Row, Col, Carousel, Card, Form, Button } from 'react-bootstrap';
 
 function App() {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#"><BsFillPersonFill /> Tu comentario Importa</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="#"><FaHome /> INICIO</Nav.Link>
-            <Nav.Link href="#"><FaRegComment /> NUEVOS MODELOS</Nav.Link>
-            <Nav.Link href="#"><FaRegComment /> MAS OPINIONES</Nav.Link>
-            <Nav.Link href="#"><FaRegComment /> CONTACTOS</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Container>
+          <Navbar.Brand href="#"><BsFillPersonFill /> Tu comentario Importa</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="#"><FaHome /> INICIO</Nav.Link>
+              <Nav.Link href="#"><FaRegComment /> NUEVOS MODELOS</Nav.Link>
+              <Nav.Link href="#"><FaRegComment /> MAS OPINIONES</Nav.Link>
+              <Nav.Link href="#"><FaRegComment /> CONTACTOS</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
 
-        <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-6">
+      <Container className="mt-5">
+        <Row>
+          <Col md={6}>
             <Carousel>
               <Carousel.Item>
                 <ExampleCarouselImage src="1.png" alt="First slide" />
@@ -47,9 +50,9 @@ function App() {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-          </div>
+          </Col>
 
-          <div className="col-md-6">
+          <Col md={6}>
             <Card>
               <Card.Header>Danos tu opinión para seguir mejorando :)</Card.Header>
               <Card.Body>
@@ -78,9 +81,9 @@ function App() {
             <div className="mt-6">
               <p className="text-muted">OMAR ABEL PINEDA HUAYRA</p>
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
