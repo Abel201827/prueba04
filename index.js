@@ -1,52 +1,50 @@
 import React from 'react';
 import { Navbar, Nav, Form, Button, Carousel, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
-import { createRoot } from 'react-dom/client';
-import { Breadcrumb } from 'react-bootstrap';
 import { BsFillPersonFill } from 'react-icons/bs';
-const feather = require('feather-icons');
+import { FaHome, FaRegComment } from 'react-icons/fa'; 
+import './style.css';
 
 function App() {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home"><BsFillPersonFill /> Tu comentario Importa</Navbar.Brand>
+        <Navbar.Brand href="#"><BsFillPersonFill /> Tu comentario Importa</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home">INICIO</Nav.Link>
-            <Nav.Link href="#link">NUEVOS MODELOS</Nav.Link>
-            <Nav.Link href="#link">MAS OPINIONES</Nav.Link>
-            <Nav.Link href="#link">CONTACTOS</Nav.Link>
+            <Nav.Link href="#"><FaHome /> INICIO</Nav.Link>
+            <Nav.Link href="#"><FaRegComment /> NUEVOS MODELOS</Nav.Link>
+            <Nav.Link href="#"><FaRegComment /> MAS OPINIONES</Nav.Link>
+            <Nav.Link href="#"><FaRegComment /> CONTACTOS</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
 
-      <div className="container mt-5">
+        <div className="container mt-5">
         <div className="row">
           <div className="col-md-6">
             <Carousel>
               <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="1.png"
-                  alt="First slide"
-                />
+                <ExampleCarouselImage src="1.png" alt="First slide" />
+                <Carousel.Caption>
+                  <h3>First slide label</h3>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="2.png"
-                  alt="Second slide"
-                />
+                <ExampleCarouselImage src="2.png" alt="Second slide" />
+                <Carousel.Caption>
+                  <h3>Second slide label</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="3.jpg"
-                  alt="Third slide"
-                />
+                <ExampleCarouselImage src="3.jpg" alt="Third slide" />
+                <Carousel.Caption>
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
           </div>
